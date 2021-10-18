@@ -7,7 +7,6 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        ART
         {this.props.children}
         <Header />
         <Navbar />
