@@ -10,23 +10,20 @@ class SignUpForm extends Component {
     render() {
         const { className, handleSubmit } = this.props;
         
-        const links = [
+        const info = [
             {
                 _id: 0,
-                title: 'Not registered? Create account here.',
-                onClick: () => history.push('/signup')
+                title: 'At least 6 characters',
             },
 
             {
                 _id: 1,
-                title: 'Forgot account email?',
-                onClick: () => console.log('forgot email')
+                title: 'At least one number',
             },
 
             {
                 _id: 2,
-                title: 'Forgot password?',
-                onClick: () => console.log('forgot password')
+                title: 'At least one symbol',
             }
         ]
 
@@ -64,7 +61,7 @@ class SignUpForm extends Component {
                 <div className='signup-form__line'></div>
 
                 <Field className="signup-form__back"
-                onClick={() => console.log('try to go back')}
+                onClick={() => history.push('/signin')}
                 type="button"
                 title="Back"
                 name="back"
@@ -72,13 +69,13 @@ class SignUpForm extends Component {
                 component={FormButton} />
 
                 <Field className="signup-form__login"
-                onClick={() => console.log('try to submit')}
+                onClick={() => history.push('/account')}
                 type="submit"
-                title="Login"
+                title="Create Account"
                 name="login"
                 component={FormButton} />
 
-                <Details className='signup-form__details' title='QuickLinks' links={links} />
+                <Details className='signup-form__details' title='Password requirements' info={info} />
             </form>
         )
     }
