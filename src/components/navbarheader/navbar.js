@@ -5,7 +5,7 @@ import * as actions from '../../actions';
 class Navbar extends Component {
     render() {
         return (
-            <div className='navbar'>
+            <div className="navbar">
                 {
                     this.props.navbarLinks.map((link, index) => {
                         return (
