@@ -61,6 +61,8 @@ class AccountInfoForm extends Component {
                 name="zipcode"
                 component={FormInput} />
 
+                <div className="account-info-form__line"></div>
+
                 {
                     this.state.showPasswords ?
                         [
@@ -83,7 +85,22 @@ class AccountInfoForm extends Component {
                             title="Confirm Password"
                             placeholder="Confirm Password"
                             name="confirm"
-                            component={FormInput}/>
+                            component={FormInput}/>,
+
+                            <Field key={3} className="account-info-form__update-information"
+                            onClick={() => this.setState({ showPasswords: false })}
+                            type="submit"
+                            title="Update Information"
+                            name="update-information"
+                            component={FormButton}/>,
+                            
+                            <Field key={4} className="account-info-form__cancel"
+                            onClick={() => this.setState({ showPasswords: false })}
+                            type="button"
+                            title="Cancel"
+                            name="cancel"
+                            short={true}
+                            component={FormButton}/>
                         ]
 
                     :
@@ -101,7 +118,7 @@ class AccountInfoForm extends Component {
 }
 
 AccountInfoForm = reduxForm({
-    form: 'AccountInfoForm'
+    form: "AccountInfoForm"
 })(AccountInfoForm);
 
 export default AccountInfoForm;
