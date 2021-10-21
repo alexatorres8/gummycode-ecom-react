@@ -7,7 +7,7 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                <img className="header__img" alt="jag - jasmine's art and graphics" />
+                <img className="header__img" alt="gummy" />
                 <div className="header__links">
                 {
                     this.props.headerLinks.map((link, index) => {
