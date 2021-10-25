@@ -2,7 +2,6 @@
     grid-row: content-s/content-e;
     grid-column: s/e;
 
-    
     display: grid;
     grid-template-rows: 15px [search-bar-s] 38px [search-bar-e] 57px [products-s] 1fr [products-e]; 
     grid-template-columns: [s] minmax(100px, 1035px) [e];
@@ -18,7 +17,7 @@
     &__products {
         grid-row: products-s/products-e;
         grid-column: s/e;
-
+        
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         grid-column-gap: 25px;
@@ -27,7 +26,7 @@
         width: 100%;
         justify-self: center;
     }
-
+    
     &__cart-button {
         z-index: 5;
     }

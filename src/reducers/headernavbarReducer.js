@@ -18,7 +18,7 @@ export default function(state = INITIAL_STATE, action) {
                 headerLinks: action.payload
             }
         case SET_NAVBAR_LINKS:
-            const { links, onClick } = action.payload; 
+        const { links, onClick } = action.payload; 
             return {
                 ...state,
                 navbarLinks: links,

@@ -1,14 +1,12 @@
 .purchase-history {
     &__content {
-        display: grid;
+        display: grid; 
         grid-template-columns: 1fr 1fr;
         margin: 37px 0;
     }
-
     &__page-title {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #CCC;
     }
-
     &__border-bottom {
         border-bottom: 1px solid #F2F2F2;
     }
@@ -26,7 +24,6 @@
     display: grid;
     grid-template-columns: [s] 1fr [m] 1fr [e];
     grid-template-rows: [s] 1fr [sm] 1fr [m-s] 25px [m-e] 1fr [me] 1fr [e];
-    
     &__order-date {
         grid-column: s/m;
         grid-row: s/sm;
@@ -65,6 +62,7 @@
         font-size: 14px;
         font-weight: 600;
     }
+
 }
 
 .purchase-detail-label {

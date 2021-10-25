@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
-import AccountInfo from './accountInfo';
+import AccountInformation from './accountInformation';
 import PurchaseHistory from './purchaseHistory';
 
 class Account extends Component {
 
     componentDidMount() {
+
         const headerLinks = [
             {
                 _id: 0,
@@ -33,7 +34,7 @@ class Account extends Component {
                 _id: 1,
                 title: 'Account Information',
                 active: false,
-                component: <AccountInfo/>
+                component: <AccountInformation/>
             }
         ]
 
@@ -55,7 +56,7 @@ class Account extends Component {
 
     render() {
         return (
-            <div className="account">
+            <div className='account'>
                 { this.renderContent() }
             </div>
         )
@@ -63,7 +64,7 @@ class Account extends Component {
 }
 
 function mapStateToProps(state) {
-    const { headerLinks, navbarLinks } = state.navbarHeader;
+    const { headerLinks, navbarLinks } = state.headerNavbar;
     return { headerLinks, navbarLinks }
 }
 

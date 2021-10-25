@@ -8,4 +8,4 @@ function CartButton({className, icon, onClick}) {
     )
 }
 
-export default CartButton; 
+export default CartButton;

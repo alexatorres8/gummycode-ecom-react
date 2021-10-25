@@ -60,6 +60,8 @@
 
 }
 
+
+
 .shop-product__back {
     height: 314px;
     width: 240px;
@@ -76,9 +78,9 @@
         grid-column: s/e;
     }
 
-
     &__title {
         grid-row: title-s/title-e;
+
         color: #00CB79;
         font-family: "Encode Sans Condensed";
         font-size: 16px;
@@ -87,6 +89,7 @@
 
     &__description {
         grid-row: description-s/description-e;
+
         font-size: 13px;
         color: #333333;
     }
@@ -102,6 +105,7 @@
     &__add-to-cart {
         justify-self: end;
         grid-row: footer-s/footer-e;
+
         height: 40px;
         width: 97px;
         border-radius: 20px;

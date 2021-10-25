@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { reduxForm, Field } from 'redux-form';
 
 import { FormInput, FormButton } from '../formFields';
@@ -9,73 +10,62 @@ import history from '../../history';
 class SignUpForm extends Component {
     render() {
         const { className, handleSubmit } = this.props;
-        
         const info = [
             {
                 _id: 0,
-                title: 'At least 6 characters',
+                title: 'At least 6 characters'
             },
-
             {
                 _id: 1,
-                title: 'At least one number',
+                title: 'At least one number'
             },
-
             {
                 _id: 2,
-                title: 'At least one symbol',
+                title: 'At least one symbol'
             }
         ]
-
         return (
-            <form onSubmit={handleSubmit} className={`${className} signup-form`}>
-                <Field className="signup-form__name"
-                type="name"
-                title="Name"
-                placeholder="Name"
-                name="name"
-                component={FormInput} />
+            <form onSubmit={handleSubmit} className={`${className} sign-up-form`}>
+                <Field className='sign-up-form__name'
+                type='name'
+                title='Name'
+                placeholder='Name'
+                name='name'
+                component={FormInput}/>
+                <Field className='sign-up-form__email'
+                type='email'
+                title='Email'
+                placeholder='Email'
+                name='email'
+                component={FormInput}/>
+                <Field className='sign-up-form__password'
+                type='password'
+                title='Password'
+                placeholder='Password'
+                name='password'
+                component={FormInput}/>
+                <Field className='sign-up-form__confirm'
+                type='password'
+                title='Confirm Password'
+                placeholder='Confirm Password'
+                name='confirm'
+                component={FormInput}/>
 
-                <Field className="signup-form__email"
-                type="email"
-                title="Email"
-                placeholder="Email"
-                name="email"
-                component={FormInput} />
-
-                <Field className="signup-form__password"
-                type="password"
-                title="Password"
-                placeholder="Password"
-                name="password"
-                component={FormInput} />
-
-                <Field className="signup-form__confirm"
-                type="password"
-                title="Confirm Password"
-                placeholder="Confirm Password"
-                name="confirm"
-                component={FormInput} />
-
-
-                <div className='signup-form__line'></div>
-
-                <Field className="signup-form__back"
-                onClick={() => history.push('/signin')}
-                type="button"
-                title="Back"
-                name="back"
-                short={true}
-                component={FormButton} />
-
-                <Field className="signup-form__login"
+                <div className='sign-up-form__line'></div>
+                <Field className='sign-up-form__login'
                 onClick={() => history.push('/account')}
-                type="submit"
-                title="Create Account"
-                name="login"
-                component={FormButton} />
-
-                <Details className='signup-form__details' title='Password requirements' info={info} />
+                type='submit'
+                title='Create Account'
+                name='login'
+                component={FormButton}/>
+                <Field className='sign-up-form__back'
+                onClick={() => history.push('/signin')}
+                type='button'
+                title='Back'
+                name='back'
+                short={true}
+                component={FormButton}/>
+                <Details className='sign-up-form__details' title='Password Requirements' info={info}/>
             </form>
         )
     }

@@ -1,4 +1,4 @@
-.account-info {
+.account-information {
     grid-row: content-s/content-e;
     grid-column: s/e;
 
@@ -14,7 +14,8 @@
     }
 }
 
-.account-info-form {
+.account-information-form {
+
     &__name {
         grid-column: s/m;
         grid-row: name-s/name-e;
@@ -84,5 +85,6 @@
     &__update-information {
         grid-column: update-s/update-e;
         grid-row: buttons-s/buttons-e;
+
     }
 }
